@@ -10,31 +10,22 @@ Two reusable components built with **React + TypeScript + TailwindCSS**, documen
 
 ## 📁 Structure
 ```
-react-ui-assignment/
-├─ .storybook/
-│  ├─ main.ts
-│  └─ preview.ts
-├─ src/
-│  ├─ components/
-│  │  ├─ InputField.tsx
-│  │  └─ DataTable.tsx
-│  ├─ stories/
-│  │  ├─ InputField.stories.tsx
-│  │  └─ DataTable.stories.tsx
-│  ├─ __tests__/
-│  │  ├─ InputField.test.tsx
-│  │  └─ DataTable.test.tsx
-│  ├─ setupTests.ts
-│  ├─ App.tsx
-│  ├─ main.tsx
-│  └─ styles.css
-├─ index.html
-├─ package.json
-├─ tsconfig.json
-├─ vite.config.ts
-├─ vitest.config.ts
-├─ tailwind.config.ts
-└─ postcss.config.js
+src/
+ ├── components/
+ │   ├── InputField/
+ │   │   ├── InputField.tsx
+ │   │   ├── InputField.stories.tsx
+ │   │   └── InputField.test.tsx
+ │   ├── DataTable/
+ │   │   ├── DataTable.tsx
+ │   │   ├── DataTable.stories.tsx
+ │   │   └── DataTable.test.tsx
+ │   └── index.ts
+ ├── pages/
+ │   └── Demo.tsx
+ ├── App.tsx
+ └── main.tsx
+
 ```
 
 ## 🚀 Getting Started
@@ -94,28 +85,6 @@ npm test
 2. Import the repo in Vercel → Framework preset **Vite**.
 3. Build Command: `npm run build`  
    Output Directory: `dist`
-4. Visit your live URL and share it.
-
-## 📝 Notes / Approach
-- **InputField** supports controlled & uncontrolled usage.
-- **DataTable** sorts by string/number and preserves stable typing via `keyof T`.
-- Responsive by default; table scrolls horizontally on small screens.
-- Clean Tailwind tokens (rounded, soft shadow, subtle brand color).
-
-## 📷 Screenshots / GIFs (optional)
-- Use **ScreenToGif** (Windows) or **Kap** (macOS) to record clips.
-- Save them under `screenshots/` and add them to the README.
-
-## 📄 License
-MIT
-
-
----
-
-## 🎨 Theme Toggle
-A **theme toggle button** is available in the demo.  
-Clicking it switches between **Light** 🌞 and **Dark** 🌙 modes.
-
 - Implemented using Tailwind's `darkMode: 'class'` strategy.
 - Updates `document.documentElement.classList` to apply dark theme globally.
 - Components automatically adapt via `dark:` classes.
